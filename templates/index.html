@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Gender Recognition</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9903915c9b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">VGR</div>
+      <nav>
+        <a href="#">Tools</a>
+        <a href="#">Doc</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="desc">
+          <h1>
+            VOICE <br />
+            GENDER <br />
+            RECOGNITION
+          </h1>
+          <p>by Hardi Tri Nugroho</p>
+        </div>
+        <div class="upload-box">
+          <h2>Upload your audio file</h2>
+          <label for="audioFile" class="drop-container" id="dropcontainer">
+            <span class="drop-title">Drop files here</span>
+            or
+            <input
+              type="file"
+              id="audioFile"
+              accept="audio/*"
+              class="audioFile"
+              required
+            />
+          </label>
+          <br />
+          <button id="uploadBtn" onclick="uploadFile()" class="original-button">
+            Generate
+          </button>
+          <div class="box-result">
+            <div id="loading" class="spinner" style="display: none"></div>
+            <div class="response">Prediction : <span id="response"></span></div>
+            <div class="accuracy">
+              Accuracy : <span id="accuracyValue"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <hr />
+      <div class="footer-content">
+        <p class="desc-footer">VGR</p>
+      </div>
+      <p>copyright@HardiTriNugroho</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

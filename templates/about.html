@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Gender Recognition</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9903915c9b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">VGR</div>
+      <nav>
+        <a href="/">Tools</a>
+        <a href="#">Doc</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="desc">
+          <h1 class="hello">Hello!</h1>
+          <p>
+            My name is <span class="text">Hardi Tri Nugroho</span> , a
+            final-year Informatics student with a keen interest in the
+            intersection of machine learning and audio processing. <br /><br />I
+            am currently working on my thesis title
+            <span class="text"
+              >"Implementation of MFCC and CNN in Gender Voice
+              Recognition."</span
+            >
+            This project combines the power of Mel-Frequency Cepstral
+            Coefficients (MFCC) for feature extraction and Convolutional Neural
+            Networks (CNN) for classification, aiming to develop an
+            <span class="text">efficient</span> and
+            <span class="text">accurate</span> system for<span class="text">
+              identifying gender</span
+            >
+
+            from <span class="text">voice recordings</span>. <br />
+            I am passionate about exploring the endless possibilities in the
+            field of artificial intelligence and am excited to contribute to
+            advancements in voice recognition technology.
+          </p>
+        </div>
+        <div class="photo-frame">
+          <img
+            src="static/images/pf.png"
+            alt="Photo Hardi"
+            srcset=""
+            class="images"
+          />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <hr />
+      <div class="footer-content">
+        <p class="desc-footer">VGR</p>
+      </div>
+      <p>copyright@HardiTriNugroho</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
